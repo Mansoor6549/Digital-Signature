@@ -98,3 +98,43 @@ downloadButton.addEventListener('click', () => {
   });
   
   // ... (previous JavaScript)
+
+// Add touch event handling for touch-enabled devices
+let isTouch = false;
+canvas.addEventListener('touchstart', (e) => {
+  isDrawing = true;
+  if (e.touches) {
+    lastX = e.touches[0].clientX - canvas.offsetLeft;
+    lastY = e.touches[0].clientY - canvas.offsetTop;
+    isTouch = true;
+  }
+});
+
+canvas.addEventListener('touchmove', (e) => {
+  if (isDrawing) {
+    e.preventDefault();
+    let x, y;
+    if (e.touches) {
+      x = e.touches[0].clientX - canvas.offsetLeft;
+      y = e.touches[0].clientY - canvas.offsetTop;
+    }
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(x, y);
+    ctx.lineWidth = penWeight;
+    ctx.stroke();
+    lastX = x;
+    lastY = y;
+  }
+});
+
+canvas.addEventListener('touchend', () => {
+  isDrawing = false;
+  if (isTouch) {
+    lastX = 0;
+    lastY = 0;
+    isTouch = false;
+  }
+});
+
+// ... (previous JavaScript)
