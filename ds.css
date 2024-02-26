@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #7fcbc5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #0d0d0d;
+    font-size: 3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration-line: underline;
+  }
+  
+  .signature-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  canvas {
+    border: 2px solid #ccc;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+  }
+  
+  .button-container {
+    display: flex;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px black;
+    border-radius: 10%;
+    background-color: #ff4800;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #a73c11;
+  }
+
+  /* ... (previous CSS) */
+
+input[type="range"] {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  
+footer{
+    margin-top: 10%; 
+    font-weight: bolder;
+}
+  /* ... (previous CSS) */
